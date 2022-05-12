@@ -1,39 +1,23 @@
-document.addEventListener("DOMContentLoaded", (e) => {
-    e.preventDefault();
-    console.log("loaded");
+function imgshow() {
+    var img = document.querySelector("#imgid");
+    img.style.display = "none";
+}
 
-    let parents, child, i
-    child = ["Linux", "OS", "Android"]
+setInterval(imgshow, /* 5500 */1);
 
-    parents = document.querySelectorAll("section")[1]
-    for(x=0; x<parents.childNodes.length; x++){
-        console.log(parents.childNodes[x].innerText)
-    } 
-    /* Dans le dom créer un élément html */
-    el = document.createElement("ul")
-    
-    parents.prepend(el)
-    /*for(data of child){
-        el.innerHTML += `<li>${data}`
-    }*/
 
-    for(index of child){
-        let value = child[index]
-        el.innerHTML += `<li>${index} : ${value}`
-        
+/* var messageArray = ["Développeur front-end et back-end utlisant HTML, CSS, JS, PHP, MySQL, Python, JAVA"];
+var textPosition = 0;
+var textSpeed = 100;
+
+typewriter = () => {
+    document.querySelector("#message").
+    innerHTML = messageArray[0].substring(0, textPosition) + 
+    "<span>\u25ae</span>";
+
+    if(textPosition++ != messageArray[0].length) {
+        setTimeout(typewriter, textSpeed);
     }
+}
 
-    
-
-    const userDate = ({
-        datecopy : new Date(),
-        date : document.querySelector("footer")
-    })
-
-    
-    console.log(datecopy.getFullYear())
-    date.innerHTML += ` ${datecopy.getFullYear()}`
-    date.textContent() = date
-
-
-});
+window.addEventListener("load", typewriter); */
